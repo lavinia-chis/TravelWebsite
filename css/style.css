@@ -717,11 +717,7 @@ i:hover {
     top: 100%;
     right: 0;
     left: 0;
-<<<<<<< HEAD
     background: linear-gradient(
-=======
-     background: linear-gradient(
->>>>>>> f80601963027029b5ddd0306b56ff63283d03a18
       90deg,
       rgba(4, 28, 223, 1) 7%,
       rgba(1, 21, 184, 1) 10%,
@@ -731,6 +727,7 @@ i:hover {
       rgba(0, 164, 255, 1) 92%,
       rgba(2, 147, 227, 1) 95%
     );
+
     border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
     padding: 1rem 2rem;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
