@@ -129,69 +129,16 @@ i:hover {
   color: var(--blue);
 }
 /* ========== ========header section ends ======= ===========  */
-/* ========== ========register section start======= ===========  */
 
-/* ========== ========register section ends ======= ===========  */
-.account {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.accountForm {
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
-  width: 100%;
-  max-width: 320px;
-  padding: 15px 20px;
-  border-radius: 5px;
-}
-
-.accountForm input:not([type="submit"]) {
-  display: block;
-  width: 100%;
-  padding: 7px 15px;
-  background-color: #fafafa;
-  margin-bottom: 20px;
-  border-radius: 16px;
-  color: #073b4c;
-}
-
-.accountForm h2 {
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.accountForm input {
-  padding: 7px 15px;
-  background-color: var(--blue);
-  color: #ffffff;
-  border-radius: 16px;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.accountForm input[type="checkbox"] {
-  display: inline-block;
-  width: auto;
-}
-
-.accountForm label {
-  display: block;
-  color: #073b4c;
-}
-
-.accountForm a {
-  color: var(--blue);
-  font-size: 16px;
-}
 /* ============= =========login form container ============== */
+
 .login-form-container {
   position: fixed;
   top: -120%;
   left: 0;
   z-index: 10000;
   min-height: 100vh;
+  width: 100%;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
@@ -214,20 +161,52 @@ i:hover {
   text-align: center;
   padding: 1rem 0;
 }
-.login-form-container form .box {
+
+.login-form-container form label {
+  position: relative;
+  display: block;
+}
+form input {
+  margin: 10px 0;
   width: 100%;
-  padding: 1rem;
-  font-size: 1.7rem;
-  color: #333;
-  margin: 0.6rem 0;
-  border: 0.1rem solid rgba(0, 0, 0, 0.3);
-  text-transform: none;
+  background: whitesmoke;
+  color: #292929;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  border: none;
+  outline: none;
 }
-.login-form-container form .box:focus {
-  border-color: var(--blue);
+.emailText,
+.passText {
+  display: block;
+  font-weight: 300;
+  font-style: italic;
+  padding: 5px;
 }
-.login-form-container form #remember {
-  margin: 2rem 0;
+label.valid .emailText,
+label.valid .passText {
+  color: #00ff00;
+}
+label.invalid .emailText,
+label.invalid .passText {
+  color: #f00;
+}
+label.valid::before,
+label.invalid::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 18px;
+  right: 5px;
+  z-index: 100;
+}
+label.valid::before {
+  background: url(/images/check.svg) no-repeat center / cover;
+}
+label.invalid::before {
+  background: url(/images/error.png) no-repeat center / cover;
 }
 .login-form-container form label {
   font-size: 1.5rem;
